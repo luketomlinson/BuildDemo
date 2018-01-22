@@ -6,6 +6,8 @@
 	<string>development</string>
 	<key>provisioningProfiles</key>
 	<dict>
+		<key>com.whatever.BuildDemo.BuildDemoExtension</key>
+		<string>Developer Personal Devices</string>
 		<key>com.whatever.BuildDemo</key>
 		<string>Developer Personal Devices</string>
 	</dict>
