@@ -1,0 +1,11 @@
+:debug:
+  :name: "Debug"
+  :scheme: "BuildDemo"
+  :export_method: "development"
+  :configuration: "Debug"
+    
+:release:
+  :name: "Release"
+  :scheme: "BuildDemoRelease"
+  :export_method: "development"
+  :configuration: "Release"

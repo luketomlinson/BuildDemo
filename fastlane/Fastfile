@@ -1,0 +1,46 @@
+fastlane_require 'yaml'
+fastlane_require 'erb'
+
+$output_dir = "buildFromFastlane"
+
+
+before_all do |lane, options|
+    $root_dir = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+    $profile_path = "#{$root_dir}/profiles"
+    $builds = YAML.load(ERB.new(File.read("#{$root_dir}/fastlane/buildConfig.yaml")).result)
+end
+
+
+desc "Build debug"
+lane :debug do |options|
+  
+  config = $builds[:debug]
+  build_with_config(config)
+
+end
+
+lane :release do |options|
+  
+    config = $builds[:release]
+    build_with_config(config)
+  
+end
+
+
+private_lane :build_with_config do |config|
+
+    UI.important "Building with config"
+    UI.important config
+    
+    output = "#{$output_dir}/#{config[:name]}"
+    archive_path = "#{output}/#{config[:name]}"
+  
+    gym(
+      scheme: config[:scheme],
+      output_directory: output,
+      export_method: config[:export_method],
+      configuration: config[:configuration],
+      archive_path: archive_path
+    )
+  
+  end

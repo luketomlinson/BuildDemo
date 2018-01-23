@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Switch to build_with_config lane" time="0.001576">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: gym" time="70.614676">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
