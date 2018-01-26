@@ -5,12 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Switch to build_with_config lane" time="0.001576">
+      <testcase classname="fastlane.lanes" name="0: Switch to build_with_config lane" time="0.001387">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: gym" time="70.614676">
+      <testcase classname="fastlane.lanes" name="1: gym" time="67.279127">
         
       </testcase>
     

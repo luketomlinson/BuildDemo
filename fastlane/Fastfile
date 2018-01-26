@@ -40,7 +40,8 @@ private_lane :build_with_config do |config|
       output_directory: output,
       export_method: config[:export_method],
       configuration: config[:configuration],
-      archive_path: archive_path
+      archive_path: archive_path,
+      xcargs: "OTHER_SWIFT_FLAGS=\"-D FASTLANE\""
     )
   
   end

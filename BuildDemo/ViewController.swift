@@ -15,10 +15,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        #if RELEASE
-            infoLabel.text = "This is a release build"
+        #if FASTLANE
+            let postfix = " from fastlane"
         #else
-            infoLabel.text = "This is a debug build"
+            let postfix = ""
+        #endif
+        
+        #if RELEASE
+            infoLabel.text = "This is a release build" + postfix
+        #else
+            infoLabel.text = "This is a debug build" + postfix
         #endif
     }
 
