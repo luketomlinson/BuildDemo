@@ -26,6 +26,11 @@ lane :release do |options|
   
 end
 
+lane :clean do |options| 
+    sh("rm -rf build")
+    sh("rm -rf buildFromFastlane")
+end
+
 
 private_lane :build_with_config do |config|
 

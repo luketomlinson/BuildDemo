@@ -39,6 +39,11 @@ Build debug
 fastlane release
 ```
 
+### clean
+```
+fastlane clean
+```
+
 
 ----
 
